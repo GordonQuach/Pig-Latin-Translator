@@ -1,0 +1,27 @@
+# We are going to check if the person actually typed 
+# something by using the len() function. Then, we check
+# if it is not numbers but letters using the .isalpha() 
+# function. We have an input statement. Then, we set the string
+# term to lowercase to make things easier. We create variables
+# to store the letters of the words. We created first_letter to 
+# store the first letter of the word. Later, we arrange final_word to 
+# combine the lower case remainder with the first letter with "ay".
+# Also, we slice the letters from the first index to the end of the word.
+# If these conditions are not met, it prints the statement for else.
+
+
+original = raw_input ("Please enter word.\t")
+
+if len(original) > 0 and original.isalpha():
+
+   pyg_suffix = ("ay")
+   word = original.lower()
+   first_letter = word[0]
+   final_word = word + first_letter + pyg_suffix 
+   final_word = final_word [1:len(final_word)]
+   final_word = final_word.capitalize()
+   print (final_word)
+
+else:
+   print ("You didn't type a word! :/ ")
+   
