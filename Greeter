@@ -1,0 +1,29 @@
+# Note: The Pig Latin translator take any word given, moves the first
+# letter to the end of the word, and adds the phrase 'ay' to the end.
+# An example is 'Gordon' becomes 'Ordongay'!
+
+print ("Pig Latin Translator\n")
+
+# This is code I created to greet the user!
+
+# yn = input ("Do you want to use a translator? Y/N.")
+
+def greeting():
+   stng = raw_input ("Hi! How was your day? Good/Bad\t\n")
+   yn = raw_input ("Do you want to use a translator? Y/N\t\n")
+   stng = stng.upper()
+   if stng == ("GOOD"):
+      print ("Awesome! Do you want to use a translator?")
+   elif stng == "BAD":
+      print ("Oh, I'm sorry. Hope it gets better! :) Do you want to use a translator?")
+      if yn == ("Y"):
+         print ("Great! Let's begin!")
+      elif yn == ("N"):
+         print ("Wow, okay then...")       
+      else:
+         exit()   
+   elif len(stng) == 0 and stng.isalpha():
+      print ("You know you didn't type a correct response, right?")
+
+greeting()
+
